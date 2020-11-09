@@ -1,2 +1,2 @@
-# [trump-countdown](https://redbrain.github.io/trump-countdown)
+# [trumpcountdown](https://redbrain.github.io/trumpcountdown)
 Countdown clock until Trump's first term ends.
