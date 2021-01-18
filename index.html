@@ -1,2 +1,8 @@
-<body style="background-color:black"><h1 id="h" style="font-family:monospace;font-size:15vw;color:white"></h1></body>
-<script>setInterval(()=>{document.getElementById("h").innerHTML=(+new Date("2021-01-20T12:00:00-05:00")-+new Date)/1e3},1)</script>
+<body style="background-color:black;display:flex;min-height:100vh;width:100%;padding:0;margin:0;align-items:center;justify-content:center;flex-direction:column">
+  <h1 id="h" style="font-family:monospace;color:white;margin:0;padding:0"></h1>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fitty/2.3.3/fitty.min.js"></script>
+<script>
+  fitty("#h");
+  setInterval(()=>{document.querySelector("#h").innerHTML=((+new Date("2021-01-20T12:00:00-05:00")-+new Date)/1e3).toFixed(3)},1);
+</script>
