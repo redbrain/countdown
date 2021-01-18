@@ -6,5 +6,5 @@
 </body>
 <script>
   fitty("#h");
-  setInterval(()=>{document.querySelector("#h").innerHTML=((+new Date("2021-01-20T12:00:00-05:00")-+new Date)/1e3).toFixed(3)},1);
+  setInterval(()=>{document.querySelector("#h").innerHTML=((+new Date("2021-01-20T12:00:00-05:00")-+new Date)/1e3).toFixed(3).replace(/\B(?=(\d{3})+(?!\d))/g,",")},1);
 </script>
