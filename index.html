@@ -8,11 +8,15 @@
     <span id="clk" style="font-family:Inconsolata,monospace;color:white"></h1>
       <script>
         fitty("#clk");
-        setInterval(() => {
-          tm=((+new Date("2021-01-20T12:00:00-05:00")-+new Date)/1e3).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,",");
-          document.querySelector("#clk").innerHTML=tm;
-          window.document.title=tm;
-        }, 10);
+        if (window.location.hash) {
+          setInterval(() => {
+            tm=((+new Date(window.location.hash.substring(1))-+new Date)/1e3).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,",");
+            document.querySelector("#clk").innerHTML=tm;
+            window.document.title=tm;
+          }, 10);
+        } else {
+          document.querySelector("#clk").innerHTML="Add a timestamp in the url, then refresh the page. For example:<br>https://redbrain.github.io/countdown#2021-01-20T12:00:00-05:00";
+        };
     </script>
   </body>
 </html>
