@@ -1,10 +1,14 @@
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fitty/2.3.3/fitty.min.js"></script>
-<body style="background-color:black;display:flex;min-height:100vh;width:100%;padding:0;margin:0;align-items:center;justify-content:center;flex-direction:column">
-  <h1 id="h" style="font-family:Inconsolata,monospace;color:white;margin:0;padding:0;font-weight:200"></h1>
-</body>
-<script>
-  fitty("#h");
-  setInterval(()=>{document.querySelector("#h").innerHTML=((+new Date("2021-01-20T12:00:00-05:00")-+new Date)/1e3).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,",")},10);
-</script>
+<html>
+  <head>
+    <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitty/2.3.3/fitty.min.js"></script>
+  </head>
+  <body style="background-color:black;display:flex;min-height:100vh;width:100%;padding:0;margin:0;align-items:center;justify-content:center;flex-direction:column">
+    <span id="clk" style="font-family:Inconsolata,monospace;color:white"></h1>
+      <script>
+        fitty("#clk");
+        setInterval(()=>{document.querySelector("#clk").innerHTML=((+new Date("2021-01-20T12:00:00-05:00")-+new Date)/1e3).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,",")},10);
+    </script>
+  </body>
+</html>
