@@ -8,7 +8,11 @@
     <span id="clk" style="font-family:Inconsolata,monospace;color:white"></h1>
       <script>
         fitty("#clk");
-        setInterval(()=>{document.querySelector("#clk").innerHTML=((+new Date("2021-01-20T12:00:00-05:00")-+new Date)/1e3).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,",")},10);
+        setInterval(() => {
+          tm=((+new Date("2021-01-20T12:00:00-05:00")-+new Date)/1e3).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g,",");
+          document.querySelector("#clk").innerHTML=tm;
+          window.document.title=tm;
+        }, 10);
     </script>
   </body>
 </html>
